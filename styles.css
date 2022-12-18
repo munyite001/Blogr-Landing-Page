@@ -16,6 +16,7 @@
   /* body gradient */
   --very-dark-gray-blue: hsl(237, 17%, 21%);
   --very-dark-desaturated-blue: hsl(237, 23%, 32%);
+  --body-gradient: linear-gradient(to bottom, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
 
   /* Fonts */
   --font-size: 16px;
@@ -35,7 +36,7 @@ html, body {
   list-style-type: none;
 }
 
-.container {
+main {
   width: 100%;
   height: 100%;
 }
@@ -47,7 +48,7 @@ header {
   background-repeat: repeat;
   width: 100%;
   height: auto;
-  border-bottom-left-radius: 200px;
+  border-bottom-left-radius: 150px;
   padding: 4rem 1rem 7rem;
 }
 
@@ -143,6 +144,105 @@ nav {
   color: var(--white);
 }
 
+/* Card Section */
+.card-section {
+  width: 100%;
+}
+
+.section-heading {
+  text-align: center;
+  margin: 7rem 0 3rem;
+  font-family: var(--font-overpass);
+  color: var(--very-light-blue);
+  font-weight: 600;
+}
+
+.article {
+  width: 100%;
+}
+
+.illustration {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.illustration .illustration-mobile {
+  width: 100%;
+}
+
+.illustration-desktop {
+  display: none;
+}
+
+.text-wrapper {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.text-item {
+  text-align: center;
+  width: 80%;
+  max-width: 500px;
+  margin: 2rem auto 3rem;
+}
+
+.text-heading {
+  font-family: var(--font-ubuntu);
+  font-weight: 700;
+  color: var(--very-light-blue);
+  margin: 1rem 5rem;
+}
+
+.text-content {
+  font-family: var(--font-ubuntu);
+  line-height: 30px;
+  color: var(--very-dark-grayish-blue);
+  margin: 0.5rem;
+}
+
+/* State of the Art Section*/
+.state-of-art-card {
+  background: url(./images/bg-pattern-circles.svg), var(--body-gradient);
+  background-position: 40% 150%;
+  background-repeat: no-repeat;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  margin: 17rem 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.state-of-art-card .illustration {
+  transform: translateY(-50%);
+}
+
+.illustration .phone-illustration {
+  width: 100%;
+  
+}
+
+.state-text-content {
+  position: absolute;
+  text-align: center;
+}
+
+.state-heading {
+  font-family: var(--font-overpass);
+  font-weight: 300;
+  color: var(--white);
+  margin: 10rem 0 1rem;
+  font-size: 40px;
+}
+
+.state-text {
+  font-size: 18px;
+  font-family: var(--font-ubuntu);
+  color: var(--grayish-blue);
+  margin: 1rem 3rem;
+}
+
 /* ATTRIBUTION */
 .attribution { 
   font-size: 11px; text-align: center; 
@@ -154,6 +254,9 @@ nav {
 
   /* Desktop Designs */
   @media screen and (min-width: 768px) {
+    body {
+      overflow-x: hidden;
+    }
     header {
       background: url(./images/bg-pattern-intro-desktop.svg), var(--intro-gradient);
       background-repeat: no-repeat;
@@ -184,5 +287,81 @@ nav {
       display: flex;
       align-items: center;
       width: 100%;
+    }
+
+    .right {
+      display: flex;
+      flex-flow: row-reverse;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .left .illustration-desktop {
+      transform: translatex(-30%);
+    }
+
+    .illustration {
+      max-width: 50%;
+    }
+
+    .illustration-mobile {
+      display: none;
+    }
+
+    .illustration-desktop {
+      display: block;
+      position: relative;
+      bottom: 10rem;
+      margin: 0;
+    }
+
+    .right .text-wrapper {
+      max-width: 50%;
+      margin: 6rem 0;
+    }
+
+    .text-item {
+      text-align: start;
+    }
+
+    .text-heading {
+      margin: 1rem 0;
+      font-size: 24px;
+    }
+
+    .text-content {
+      margin: 1rem 0;
+    }
+
+    /* State of the art card section */
+    .state-of-art-card {
+      width: 100%;
+      background-position: -70% 90%;
+      display: flex;
+      margin: 1rem 0 15rem;
+    }
+
+    .state-of-art-card .illustration {
+      width: 50%;
+      transform: unset;
+    }
+
+    .state-text-content {
+      position: unset;
+      width: 50%;
+      text-align: start;
+      margin: 0 2rem;
+    }
+
+    .state-heading {
+      margin: 0;
+    }
+
+    .state-text {
+      margin: 1rem 0;
+      max-width: 500px;
     }
   }
