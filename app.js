@@ -2,7 +2,7 @@
 const mobileMenu = document.querySelector('.mobile-menu');
 const openMenu = document.querySelector('.hamburger-menu');
 const hamburger = document.querySelector('.open-menu-img');
-const menuLinks = document.querySelectorAll('.mobile-menu-link');
+const menuLinks = document.querySelectorAll('.nested-list-link');
 const nav = document.querySelector('.nav');
 
 openMenu.addEventListener('click', ()=>{
@@ -24,16 +24,16 @@ openMenu.addEventListener('click', ()=>{
 //  Show and hide Mobile menu lists
 menuLinks.forEach((link) => {
   link.addEventListener('click',(e) => {
-    let menuList = e.currentTarget.querySelector('.menu-link-list');
+    let menuList = e.currentTarget.querySelector('.nested-list');
     let arrow = e.currentTarget.querySelector('.arrow-icon');
-    if(menuList.classList.contains("show-link-list"))
+    if(menuList.classList.contains("show-nested-list"))
     {
-      menuList.classList.remove("show-link-list");
+      menuList.classList.remove("show-nested-list");
       arrow.style.rotate = "0deg";
     }
     else
     {
-      menuList.classList.add("show-link-list");
+      menuList.classList.add("show-nested-list");
       arrow.style.rotate = "180deg";
     }
   });
@@ -45,7 +45,11 @@ window.addEventListener("scroll", () => {
   if (scrollY > 40)
   {
     nav.classList.add('sticky-nav');
-    nav.style.width = "100%";
+    nav.style.width="100%";
+    if(window.innerWidth > 768)
+    {
+      nav.style.padding = "0 12%"
+    }
   }
   else
   {
@@ -53,6 +57,7 @@ window.addEventListener("scroll", () => {
     if (window.innerWidth > 768)
     {
       nav.style.width = "80%";
+      nav.style.padding="1rem";
     }
   }
 })
