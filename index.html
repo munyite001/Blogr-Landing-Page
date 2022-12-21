@@ -14,7 +14,7 @@
 <body>
   <main>
     <header>
-      <nav>
+      <nav class="nav">
         <div class="logo-container">
           <img src="./images/logo.svg" alt="Blogr Logo" id="logo">
         </div>
@@ -23,6 +23,13 @@
             <li class="nav-link">
               Product
               <img src="./images/icon-arrow-light.svg" alt="Arrow icon" class="arrow-icon">
+              <ul class="desktop-menu-link-list">
+                <li>Overview</li>
+                <li>Pricing</li>
+                <li>Marketplace</li>
+                <li>Features</li>
+                <li>Integrations</li>
+              </ul>
             </li>
             <li class="nav-link">
               Company
@@ -39,7 +46,7 @@
           </div>
         </div>
         <div class="hamburger-menu">
-          <img src="./images/icon-hamburger.svg" alt="Hamburger Menu">
+          <img src="./images/icon-hamburger.svg" alt="Hamburger Menu" class="open-menu-img open">
         </div>
       </nav>
       <div class="text-intro">
@@ -51,6 +58,45 @@
         </div>
       </div>
     </header>
+    <div class="mobile-menu">
+      <ul class="mobile-menu-list">
+        <li class="mobile-menu-link">
+          Product
+          <img src="./images/icon-arrow-dark.svg" alt="Arrow icon" class="arrow-icon">
+          <ul class="menu-link-list">
+            <li>Overview</li>
+            <li>Pricing</li>
+            <li>Marketplace</li>
+            <li>Features</li>
+            <li>Integrations</li>
+          </ul>
+        </li>
+        <li class="mobile-menu-link">
+          Company
+          <img src="./images/icon-arrow-dark.svg" alt="Arrow icon" class="arrow-icon">
+          <ul class="menu-link-list">
+            <li>About</li>
+            <li>Team</li>
+            <li>Blog</li>
+            <li>Careers</li>
+          </ul>
+        </li>
+        <li class="mobile-menu-link">
+          Connect
+          <img src="./images/icon-arrow-dark.svg" alt="Arrow icon" class="arrow-icon">
+          <ul class="menu-link-list">
+            <li>Contact</li>
+            <li>Newsletter</li>
+            <li>LinkedIn</li>
+          </ul>
+        </li>
+      </ul>
+      <hr class="line">
+      <div class="btn-wrapper">
+        <button class="btn btn-transparent">Login</button>
+        <button class="btn btn-white">Sign Up</button>
+      </div>
+    </div>
     <section class="card-section">
     <h2 class="section-heading">
       Designed for the future
@@ -136,5 +182,7 @@
       <li class="footer-list-item">LinkedIn</li>
     </ul>
   </footer>
+
+  <script src="./app.js"></script>
 </body>
 </html>
