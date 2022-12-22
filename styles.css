@@ -438,6 +438,11 @@ footer {
   color: var(--light-red);
 }
 
+.footer-list-item:active, .footer-list-item:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 
 /* ATTRIBUTION */
 .attribution { 
