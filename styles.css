@@ -241,7 +241,7 @@ nav {
 .illustration-phone-container {
   margin: 1rem 0 12rem;
   width: 100%;
-  transform: translateY(-50%);
+  transform: translateY(-40%);
 }
 
 .phone-illustration {
@@ -260,7 +260,7 @@ nav {
   font-weight: 300;
   color: var(--white);
   font-size: 40px;
-  margin: 1rem 0;
+  margin: 3rem 0 1rem;
 }
 
 .state-text {
